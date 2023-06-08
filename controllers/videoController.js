@@ -1,7 +1,7 @@
 const db = require("../DATABASE");
 
 const getAllVideos = (req, res) => {
-  db.all("select * from allJoined", [], (err, rows) => {
+  db.all("select * from video", [], (err, rows) => {
     if (err) return res.json({ message: err.message });
     res.json({ data: rows });
   });
